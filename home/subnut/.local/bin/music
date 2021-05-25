@@ -1,0 +1,23 @@
+#!/bin/sh
+if test -z "$MUSIC_DIR"
+then export MUSIC_DIR="/mnt/Deezloader Music/"
+fi
+
+if test -z "$MUSIC_EXEC"
+# then export MUSIC_EXEC="ffplay -v error"
+then export MUSIC_EXEC=mpv
+fi
+
+if test -n "$DIRS_ONLY" && test "$DIRS_ONLY" -eq 1
+then export DIRS_ONLY="-type d"
+else export DIRS_ONLY=
+fi
+
+find "$MUSIC_DIR" -iname "*${*}*" $DIRS_ONLY
+
+echo -n 'Play? [Y/n] ' >&2
+read ANSWER
+
+if test -z "$ANSWER" || echo "$ANSWER" | grep -q '^[yY]'
+then exec find "$MUSIC_DIR" -iname "*${*}*" $DIRS_ONLY	-exec $MUSIC_EXEC {} +
+fi

@@ -12,6 +12,8 @@ cp -v /etc/doas.conf        root/etc
 cp -v ~/.xsession           home/subnut
 cp -v ~/.vimrc              home/subnut
 
-cp -rv ~/.config/bspwm       home/subnut/.config
+cp -rv ~/.config/bspwm      home/subnut/.config
+
+cp -rv ~/.local/bin/music   home/subnut/.local/bin
 
 # vim:ts=4 et:
