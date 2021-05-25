@@ -22,10 +22,10 @@ Disk: sd0       Usable LBA: 34 to 2000409230 [2000409264 Sectors]
 </samp>
 
 When you are convinced that you have selected the correct drive, check the
-partition letter using the `disklabel` command -
+partition letter using the `disklabel -h` command -
 
 <samp>
-openpad# disklabel sd0
+openpad# disklabel -h sd0
 # /dev/rsd0c:
 type: SCSI
 disk: SCSI disk
@@ -37,19 +37,19 @@ sectors/track: 63
 tracks/cylinder: 255
 sectors/cylinder: 16065
 cylinders: 124519
-total sectors: 2000409264
+total sectors: 2000409264 # total bytes: 976762.3M
 boundstart: 0
 boundend: 2000409264
 drivedata: 0 
 
 16 partitions:
 #                size           offset  fstype [fsize bsize   cpg]
-  c:       2000409264                0  unused                    
-  i:          1083392             2048 unknown                    
-  j:           204800          1085440   MSDOS                    
-  k:            32768          1290240 unknown                    
-  l:        587100160          1323008   MSDOS                    
-  m:        844367872        588423168   MSDOS                    
+  c:        976762.3M                0  unused                    
+  i:           529.0M             2048 unknown                    
+  j:           100.0M          1085440   MSDOS                    
+  k:            16.0M          1290240 unknown                    
+  l:        286670.0M          1323008   MSDOS                    
+  m:        412289.0M        588423168   MSDOS                    
 </samp>
 
 Say, you want to mount the last partion. The partion you shall use while
