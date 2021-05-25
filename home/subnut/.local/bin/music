@@ -1,6 +1,11 @@
 #!/bin/sh
+
+# We first cd into /tmp so that, if $MUSIC_EXEC dumps core, then it doesn't
+# stay in the current dir, but is wiped out along with /tmp
+cd /tmp
+
 if test -z "$MUSIC_DIR"
-then export MUSIC_DIR="/mnt/Deezloader Music/"
+then export MUSIC_DIR="/mnt/d/Deezloader Music/"
 fi
 
 if test -z "$MUSIC_EXEC"
@@ -13,11 +18,11 @@ then export DIRS_ONLY="-type d"
 else export DIRS_ONLY=
 fi
 
-find "$MUSIC_DIR" -iname "*${*}*" $DIRS_ONLY
-
+find "$MUSIC_DIR" '(' -path "*${*}*" -or -iname "*${*}*" ')' $DIRS_ONLY
 echo -n 'Play? [Y/n] ' >&2
 read ANSWER
 
 if test -z "$ANSWER" || echo "$ANSWER" | grep -q '^[yY]'
-then exec find "$MUSIC_DIR" -iname "*${*}*" $DIRS_ONLY	-exec $MUSIC_EXEC {} +
+then exec \
+find "$MUSIC_DIR" '(' -path "*${*}*" -or -iname "*${*}*" ')' $DIRS_ONLY -exec $MUSIC_EXEC {} +
 fi
