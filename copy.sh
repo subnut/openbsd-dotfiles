@@ -13,6 +13,7 @@ cp -v ~/.xsession           home/subnut
 cp -v ~/.vimrc              home/subnut
 
 cp -rv ~/.config/bspwm      home/subnut/.config
+cp -rv ~/.config/fontconfig home/subnut/.config
 
 cp -rv ~/.local/bin/music   home/subnut/.local/bin
 
