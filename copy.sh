@@ -16,5 +16,6 @@ cp -rv ~/.config/bspwm      home/subnut/.config
 cp -rv ~/.config/fontconfig home/subnut/.config
 
 cp -rv ~/.local/bin/music   home/subnut/.local/bin
+cp -rv ~/.local/bin/killall home/subnut/.local/bin
 
 # vim:ts=4 et:
