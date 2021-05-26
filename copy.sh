@@ -17,6 +17,7 @@ cp -v ~/.zshrc              home/subnut
 cp -v ~/.zsh/*              home/subnut/.zsh
 
 cp -rv ~/.config/bspwm      home/subnut/.config
+cp -rv ~/.config/sxhkd      home/subnut/.config
 cp -rv ~/.config/fontconfig home/subnut/.config
 cp -rv ~/.config/xsettingsd home/subnut/.config
 
