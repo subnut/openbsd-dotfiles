@@ -18,6 +18,10 @@ then export DIRS_ONLY="-type d"
 else export DIRS_ONLY=
 fi
 
+if test ! -d "$MUSIC_DIR"
+then echo "directory \"$MUSIC_DIR\" does not exist"; exit 1
+fi
+
 find "$MUSIC_DIR" '(' -path "*${*}*" -or -iname "*${*}*" ')' $DIRS_ONLY
 echo -n 'Play? [Y/n] ' >&2
 read ANSWER
