@@ -3,6 +3,7 @@ cmus-2.9.1          ncurses-based music player
 feh-3.6.3           lightweight image viewer
 ffmpeg-4.3.2p0v1    audio/video converter and streamer
 firefox-88.0.1      Firefox web browser
+fzf-0.24.1p1        command-line fuzzy finder
 git-2.31.1          distributed version control system
 htop-3.0.5pl20210325p0 interactive process viewer
 inconsolata-new-3.000 monospace font designed for coders

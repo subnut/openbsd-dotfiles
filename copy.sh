@@ -11,6 +11,9 @@ cp -v /etc/doas.conf        root/etc
 
 cp -v ~/.xsession           home/subnut
 cp -v ~/.vimrc              home/subnut
+cp -v ~/.fzf.zsh            home/subnut
+cp -v ~/.zshrc              home/subnut
+cp -v ~/.zsh/*              home/subnut/.zsh
 
 cp -rv ~/.config/bspwm      home/subnut/.config
 cp -rv ~/.config/fontconfig home/subnut/.config
