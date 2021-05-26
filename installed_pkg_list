@@ -25,4 +25,5 @@ unzip-6.0p14        extract, list & test files in a ZIP archive
 vim-8.2.2580-no_x11 vi clone, many additional features
 xcape-1.2           configure a modifier key when pressed and released by itself
 xclip-0.13p1        command line interface to X selections
+xsettingsd-1.0.2    lightweight XSETTINGS daemon
 zsh-5.8p0           Z shell, Bourne shell-compatible
