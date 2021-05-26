@@ -9,6 +9,7 @@ cp -v /etc/wsconsctl.conf   root/etc
 cp -v /etc/sysctl.conf      root/etc
 cp -v /etc/doas.conf        root/etc
 
+cp -v ~/.Xdefaults          home/subnut
 cp -v ~/.xsession           home/subnut
 cp -v ~/.vimrc              home/subnut
 cp -v ~/.fzf.zsh            home/subnut
