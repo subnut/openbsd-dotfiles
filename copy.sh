@@ -21,6 +21,9 @@ cp -rv ~/.config/sxhkd      home/subnut/.config
 cp -rv ~/.config/fontconfig home/subnut/.config
 cp -rv ~/.config/xsettingsd home/subnut/.config
 
+cp -v  ~/.gtkrc-2.0         home/subnut
+cp -rv ~/.config/gtk-3.0    home/subnut/.config
+
 cp -rv ~/.local/bin/music   home/subnut/.local/bin
 
 # vim:ts=4 et:
