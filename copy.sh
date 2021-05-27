@@ -12,6 +12,8 @@ cp -v /etc/doas.conf        root/etc
 cp -v ~/.Xdefaults          home/subnut
 cp -v ~/.xsession           home/subnut
 cp -v ~/.vimrc              home/subnut
+cp -v ~/.gitconfig          home/subnut
+
 cp -v ~/.fzf.zsh            home/subnut
 cp -v ~/.zshrc              home/subnut
 cp -v ~/.zsh/*              home/subnut/.zsh
