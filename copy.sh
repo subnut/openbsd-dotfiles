@@ -14,6 +14,7 @@ cp -v ~/.xsession           home/subnut
 cp -v ~/.vimrc              home/subnut
 cp -v ~/.gitconfig          home/subnut
 
+cp -v ~/.pythonrc           home/subnut
 cp -v ~/.fzf.zsh            home/subnut
 cp -v ~/.zshrc              home/subnut
 cp -v ~/.zsh/*              home/subnut/.zsh
