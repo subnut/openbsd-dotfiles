@@ -1,4 +1,10 @@
 #!/bin/sh
+if [ ! -w /usr ]; then
+	echo 'error: cannot write to /usr' >&2
+	echo 'Please run as a user who has write-access to /usr (eg. root)' >&2
+	exit 1
+fi
+
 function run
 {
 	echo -n '> '
@@ -13,19 +19,13 @@ function sighandler
 	run rm ports.tar.gz
 	exit $SAVED_RETCODE
 }
+
 trap 'sighandler' INT EXIT TERM HUP
 
 run cd /tmp
-run curl -L \
-	$(cat /etc/installurl)/$(uname -r)/ports.tar.gz \
-	-o ports.tar.gz \
+run curl -L $(cat /etc/installurl)/$(uname -r)/ports.tar.gz -o ports.tar.gz
+run tar xzf ports.tar.gz -C /usr
+run pkg_add portslist \
+	|| echo 'warning: could not install portslist' >&2
 
-if [ ! -w /usr ]; then
-	run doas tar xzf ports.tar.gz -C /usr
-	run doas pkg_add portslist
-else
-	run tar xzf ports.tar.gz -C /usr
-	run pkg_add portslist
-fi
-
-# vim:ts=4 noet:
+# vim:ts=4 sw=0 sts=0 noet:
