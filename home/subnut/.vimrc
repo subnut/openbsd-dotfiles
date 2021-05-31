@@ -17,6 +17,9 @@ setg fileformat=unix
 set listchars=eol:$,tab:>-
 nnoremap <C-l> <cmd>set list!<CR>
 
+com! Q  q
+com! Wq wq
+
 set mouse=n
 map <MiddleMouse>   <Nop>
 map <2-MiddleMouse> <Nop>
@@ -225,6 +228,29 @@ nmap <Plug>(MyCommentor)
 vmap <Plug>(MyCommentor) <ESC>'<<Plug>(MyCommentor)'>
 "}}}
 "}}}
+" Copy to clipboard {{{
+if has('xterm_clipboard') && has('unnamedplus')
+    set clipboard=unnamedplus
+elseif has('unix') && executable('xclip')
+    " NOTE: We check for +unix because the system() function is available only
+    " on unix.
+    aug YankToClipboard
+        au!
+        au TextYankPost *
+            \ if v:event.regname ==# '' && v:event.regtype =~ "\<C-V>"
+                \|silent! call system(
+                    \'xclip -in -sel clipboard',
+                    \ join(v:event.regcontents, "\n")
+                \)
+            \|elseif v:event.regtype ==? 'v'
+                \| silent! call system(
+                    \'xclip -in -sel clipboard',
+                    \ v:event.regcontents
+                \)
+            \|endif
+    aug END
+endif
+" }}}
 
 
 if !empty(glob('~/.vim/autoload/plug.vim'))
