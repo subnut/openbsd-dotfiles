@@ -1,30 +1,32 @@
-bspwm-0.9.10p0      binary space partitioning window manager
-cmus-2.9.1          ncurses-based music player
-feh-3.6.3           lightweight image viewer
-ffmpeg-4.3.2p0v1    audio/video converter and streamer
-firefox-88.0.1      Firefox web browser
-fzf-0.24.1p1        command-line fuzzy finder
-git-2.31.1          distributed version control system
-htop-3.0.5pl20210325p0 interactive process viewer
-inconsolata-new-3.000 monospace font designed for coders
-links-1.03p0        text browser, displays while downloading
-lxappearance-0.6.3p1 GTK 2 and 3 Theme Switcher from LXDE
-maim-5.6.3          desktop screenshot utility (make image)
-mpv-0.33.1          movie player based on MPlayer/mplayer2
-noto-emoji-20200408 emoji fonts for the noto font family
-noto-fonts-20171024 pan-unicode font family
-ntfs_3g-2017.3.23p2 FUSE NTFS driver with read/write support
-python3-3.8p0       meta-package to install the current version of python 3
-ranger-1.9.3p1      minimalistic console file manager
-rxvt-unicode-9.26   clone of rxvt with Unicode and Xft support
-sxhkd-0.6.2p0       simple X hotkey daemon
-tcc-0.9.27.20210221 tiny C compiler
-tor-browser-10.0.15 Tor Browser meta package
-tree-0.62           print ascii formatted tree of a directory structure
-unzip-6.0p14        extract, list & test files in a ZIP archive
-vim-8.2.2580-no_x11 vi clone, many additional features
-xcape-1.2           configure a modifier key when pressed and released by itself
-xclip-0.13p1        command line interface to X selections
-xsettingsd-1.0.2    lightweight XSETTINGS daemon
-zathura-pdf-mupdf-0.3.6 mupdf pdf plugin for zathura
-zsh-5.8p0           Z shell, Bourne shell-compatible
+bspwm--
+cmus--
+feh--
+ffmpeg--
+firefox--
+fzf--
+git--
+htop--
+inconsolata-new--
+links--
+lxappearance--
+maim--
+mpv--
+noto-emoji--
+noto-fonts--
+ntfs_3g--
+portslist--
+python3--
+quirks--
+ranger--
+rxvt-unicode--
+sxhkd--
+tcc--
+tor-browser--
+tree--
+unzip--
+vim--no_x11
+xcape--
+xclip--
+xsettingsd--
+zathura-pdf-mupdf--
+zsh--

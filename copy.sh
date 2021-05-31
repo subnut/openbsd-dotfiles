@@ -1,9 +1,9 @@
 #!/bin/sh
 cd "$(dirname "$0")"
 
-pkg_info -m \
-        | grep -Ev '(amdgpu|iwm|uvideo|vmm)-firmware|^quirks-|^portslist-' \
-        > installed_pkg_list
+# On a new machine, simply run -
+#   pkg_add -l installed_pkg_list
+pkg_info -mz > installed_pkg_list
 
 cp -v /etc/wsconsctl.conf   root/etc
 cp -v /etc/sysctl.conf      root/etc
