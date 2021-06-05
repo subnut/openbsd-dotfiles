@@ -46,12 +46,12 @@ OpenBSD, and select **`(U)pgrade`**. Now -
 
 The screen should now show something like this -
 
-<samp>
+<pre><samp>
 Choose your keyboard layout ('?' or 'L' for list) [default] us
 Which disk is the root disk? ('?' for details) [sd1] ?
 Checking root filesystem (fsck -fp /dev/sd1a)... OK
 Checking root filesystem (mount -o ro /dev/sd1a /mnt)... OK
-</samp>
+</samp></pre>
 
 Notice the last line? Yes, the drive has been mounted for us.  
 Now, press `^C` (`ctrl`+`C`) to drop into a shell.
