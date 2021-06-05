@@ -35,8 +35,33 @@ And, you should be good!
 
 
 ## About that `rc.firsttime` thing...
-First boot after installation, `rc` runs **and then, deletes** the
-`rc.firsttime` script. So, you can't find what that script contained. Sorry.
+<del>First boot after installation, `rc` runs **and then, deletes** the
+`rc.firsttime` script. So, you can't find what that script contained. Sorry.</del>
+
+To see the contents of `rc.firsttime`, reboot into the USB used to install
+OpenBSD, and select **`(U)pgrade`**. Now -
+
+- Select keyboard layout
+- Select the disk where you installed OpenBSD
+
+The screen should now show something like this -
+
+<samp>
+Choose your keyboard layout ('?' or 'L' for list) [default] us
+Which disk is the root disk? ('?' for details) [sd1] ?
+Checking root filesystem (fsck -fp /dev/sd1a)... OK
+Checking root filesystem (mount -o ro /dev/sd1a /mnt)... OK
+</samp>
+
+Notice the last line? Yes, the drive has been mounted for us.  
+Now, press `^C` (`ctrl`+`C`) to drop into a shell.
+
+##### To see the contents of `rc.firsttime` -
+```
+less /mnt/etc/rc.firsttime
+```
+
+
 
 It is recommended that your ethernet connection is setup during the
 installation, because `rc.firsttime` does a lot of internet-related tasks.
