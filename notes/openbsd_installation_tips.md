@@ -62,9 +62,7 @@ less /mnt/etc/rc.firsttime
 ```
 
 
-
-It is recommended that your ethernet connection is setup during the
-installation, because `rc.firsttime` does a lot of internet-related tasks.
+<br>
 
 Don't worry if some of the firmware updates couldn't be installed while
 rc.firsttime was running. Firmwares can be installed later.
@@ -79,4 +77,21 @@ rc.firsttime was running. Firmwares can be installed later.
 use the installed firmware.
 
 ### Enjoy!
-your freshly-minted OpenBSD installation.
+Enjoy your freshly-minted OpenBSD installation.
+
+
+# Re-installing OpenBSD
+## Why
+There can be many reasons to re-install OpenBSD. In my case, it was a
+kernel-compiled driver that wasn't working properly. To be precise, the
+`azalia(4)` driver wasn't detecting my headphone DAC, as a result of which, the
+headphone jack wasn't working even after many reboots.
+
+## How
+To re-install OpenBSD base and kernel, boot into the installation medium of
+your current OpenBSD release, choose **`(U)pgrade`** and follow the
+instructions (ie. answer the questions). When prompted to install the sets,
+install the sets corresponding to your current release.
+
+## Done!
+Enjoy!
