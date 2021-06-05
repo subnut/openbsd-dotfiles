@@ -29,5 +29,6 @@ cp -v  ~/.gtkrc-2.0         home/subnut
 cp -rv ~/.config/gtk-3.0    home/subnut/.config
 
 cp -rv ~/.local/bin/music   home/subnut/.local/bin
+cp -rv ~/.local/bin/mpv     home/subnut/.local/bin
 
 # vim:ts=4 et:
