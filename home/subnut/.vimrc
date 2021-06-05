@@ -315,12 +315,13 @@ else
     echohl WarningMsg
     echom 'vim-plug not installed. plugins not available.'
     echohl None
-    if !empty(exepath(curl))
+    if !empty(exepath('curl'))
         echom 'run :PlugInstall to install vim-plug'
         execute("command! PlugInstall execute '!curl -L --create-dirs
                 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-                \ >> ~/.vim/autoload/plug.vim'
-                \| source " . expand("%")
+                \ -o ~/.vim/autoload/plug.vim'
+                \| source " . expand('<sfile>')
+                \. '|PlugInstall'
                 \)
     endif
 endif
