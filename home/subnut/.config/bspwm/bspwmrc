@@ -12,14 +12,14 @@ xmodmap -e 'remove Lock = Caps_Lock' && \
 xmodmap -e 'remove control = Control_L' && \
 xmodmap -e 'keysym Caps_Lock = Control_L' && \
 xmodmap -e 'add control = Control_L' && \
-killall xcape
+pkill xcape
 xcape -t 300 -e 'Control_L=XF86Favorites'
 
 
-killall -q sxhkd
+pkill sxhkd
 sh -c 'sxhkd &> /dev/null &'
 
-# killall -q /usr/lib/gsd-xsettings
+# pkill -q /usr/lib/gsd-xsettings
 # /usr/lib/gsd-xsettings &> /dev/null &
 # disown
 
@@ -59,10 +59,10 @@ bspc rule -a feh state=floating layer=above focus=on
 bspc rule -a Zathura state=tiled
 bspc rule -a Surf state=tiled
 
-killall xmousepasteblock
+pkill xmousepasteblock
 sh -c 'xmousepasteblock &> /dev/null &'
 
-killall clipster
+pkill clipster
 sh -c 'clipster -d &> /dev/null &'
 
 
@@ -75,7 +75,7 @@ sh -c 'clipster -d &> /dev/null &'
 
 pgrep urxvtd >/dev/null || urxvtd -q -f -o
 
-# killall -q picom
+# pkill -q picom
 # picom --experimental-backends &> /dev/null &
 
 exec /bin/sh -c 'bspc subscribe report | tcc -run ~/.config/bspwm/desktop_manager.c | /bin/sh'
