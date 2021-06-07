@@ -5,6 +5,7 @@ cd "$(dirname "$0")"
 #   pkg_add -l installed_pkg_list
 pkg_info -mz > installed_pkg_list
 
+cp -v /etc/rc.conf.local    root/etc
 cp -v /etc/wsconsctl.conf   root/etc
 cp -v /etc/sysctl.conf      root/etc
 cp -v /etc/doas.conf        root/etc
