@@ -18,6 +18,9 @@ xcape -t 300 -e 'Control_L=XF86Favorites'
 pkill sxhkd
 sh -c 'sxhkd &> /dev/null &'
 
+pkill xmousepasteblock
+sh -c '~/.local/bin/xmousepasteblock &> /dev/null &'
+
 # pkill -q /usr/lib/gsd-xsettings
 # /usr/lib/gsd-xsettings &> /dev/null &
 # disown
