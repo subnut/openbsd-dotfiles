@@ -21,6 +21,7 @@ cp -v ~/.zlogin             home/subnut
 cp -v ~/.zshrc              home/subnut
 cp -v ~/.zsh/*              home/subnut/.zsh
 
+cp -rv ~/.vim               home/subnut
 cp -rv ~/.config/bspwm      home/subnut/.config
 cp -rv ~/.config/sxhkd      home/subnut/.config
 cp -rv ~/.config/fontconfig home/subnut/.config
