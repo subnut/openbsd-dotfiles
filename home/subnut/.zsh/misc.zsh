@@ -12,11 +12,11 @@ alias la='ls -la'
 export EDITOR=vim
 export DIFFPROG=vimdiff
 alias n=vim
-if [[ $TERM =~ 'st-256color' ]]; then
-	export EDITOR=nvim
-	export DIFFPROG="nvim -d"
-	alias n=nvim
-fi
+# if [[ $TERM =~ 'st-256color' ]]; then
+# 	export EDITOR=nvim
+# 	export DIFFPROG="nvim -d"
+# 	alias n=nvim
+# fi
 alias nvimvenv="source ~/.config/nvim/venv/bin/activate"
 alias nvimdiff="nvim -d"
 alias nlsp="nvim --cmd 'let g:enable_lsp = 1'"
