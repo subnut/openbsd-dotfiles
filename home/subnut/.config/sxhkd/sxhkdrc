@@ -2,6 +2,9 @@
 # wm independent hotkeys
 #
 
+XF86Favorites
+	:
+
 # terminal emulator
 super + Return
 	urxvtc
