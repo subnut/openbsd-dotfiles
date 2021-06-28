@@ -31,6 +31,8 @@ setopt HIST_REDUCE_BLANKS		# RemoveTrailingWhiteSpace
 setopt HIST_VERIFY				# VERY IMPORTANT. `sudo !!` <enter> doesn't execute directly. instead, it just expands.
 setopt INC_APPEND_HISTORY		# immediately _append_ to HISTFILE instead of _replacing_ it _after_ the shell exits
 bindkey "^[" vi-cmd-mode		# vi-mode
+
+## PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=./:$PATH
 
