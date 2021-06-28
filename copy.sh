@@ -3,7 +3,7 @@ cd "$(dirname "$0")"
 
 install()
 {
-        cp -rv home/subnut/* home/subnut/.* "$HOME"
+        cp -rv home/subnut "$(dirname "$HOME")"
         if test $(uname) = OpenBSD
         then
                 (cd $HOME; ln -s .xinitrc .xsession; rm .zprofile)
@@ -58,6 +58,10 @@ copy()
 
         fi
 
+        for file in $(cat .gitignore)
+        do
+                rm -v "$file"
+        done
         exit 0
 }
 
