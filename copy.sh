@@ -6,7 +6,7 @@ install()
         cp -rv home/subnut "$(dirname "$HOME")"
         if test $(uname) = OpenBSD
         then
-                (cd $HOME; ln -s .xinitrc .xsession; rm .zprofile)
+                (cd $HOME; ln -s .xinitrc .xsession; rm .zprofile ~/.local/bin/light)
                 pkg_add -l openbsd_pkg_list
                 echo 'copy root/etc to / by running -'
                 echo '    cp -rv root/etc /'
@@ -44,6 +44,8 @@ copy()
         cp -rv ~/.local/bin/music   home/subnut/.local/bin
         cp -rv ~/.local/bin/mpv     home/subnut/.local/bin
 
+        test $(uname) = 'Linux' && \
+        cp -rv ~/.local/bin/light   home/subnut/.local/bin
 
 
         if [ `uname` = 'OpenBSD' ]
